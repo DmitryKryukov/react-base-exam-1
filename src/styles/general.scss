@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+html {
+    transition: background-color var(--ease-out-quint) .3s;
+}
+html:has(.modal-wrapper--open) {
+    background-color: var(--modal-overlay);
+}
+html,
+body {
+    scrollbar-gutter: stable;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        color-scheme: dark;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100lvh;
+    background-color: var(--background-body);
+    color: var(--foreground-body);
+    font-size: 24px;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+body:has(.modal-wrapper--open) {
+    overflow: hidden;
+}
+
+input {
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+}   

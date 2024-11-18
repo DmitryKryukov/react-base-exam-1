@@ -1,0 +1,111 @@
+.modal-wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100vw;
+    height: 100lvh;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.modal-wrapper--open {
+    pointer-events: initial;
+
+    .modal-wrapper__overlay {
+        background-color: var(--modal-overlay);
+    }
+
+    .modal {
+        translate: 0 0;
+    }
+}
+
+.modal-wrapper__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: all .3s var(--ease-out-quint);
+    cursor: pointer;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    width: min(560px, 100%);
+    height: calc(100lvh - 200px);
+    background-color: var(--background-base);
+    border-radius: 28px 28px 0 0;
+    overflow: hidden;
+    translate: 0 100%;
+    transition: translate .3s var(--ease-out-quint);
+}
+
+.modal-header {
+    position: relative;
+    display: flex;
+    margin-right: -14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    align-items: center;
+}
+
+.modal__title {
+    flex: 1;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.modal__close {
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding: 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &:hover, &:focus{
+        background-color: var(--background-body);
+    }
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.modal-content-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.modal-content-toogle-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.modal-footer {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    padding-bottom: 16px;
+}
+.modal-footer__shortcut {
+    position: absolute;
+    right: 32px;
+    bottom: 30px;
+    pointer-events: none;
+}
+
+.icon--deadline {
+    scale: 1.25;
+}

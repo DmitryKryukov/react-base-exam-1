@@ -1,0 +1,98 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px 12px 12px;
+    z-index: 2;
+
+    @media (max-width: 1150px) {
+        flex-direction: column;
+        padding: 12px 12px 0;
+    }
+}
+
+.main-header__user-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-primary);
+
+    @media (max-width: 1150px) {
+        display: none;
+    }
+}
+
+.main-header__user-name {
+    margin-bottom: 4px;
+}
+
+.main-header__filter-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: calc(50% - 250px);
+    width: min(500px, 100%);
+    align-self: start;
+    @media (max-width: 1150px) {
+        position: relative;
+        left: initial;
+        align-self: initial;
+    }
+}
+
+.main-header__search-wrapper {
+    position: relative; 
+    &:after {
+        content: "";
+        position: absolute;
+        display: flex;
+        width: 40px;
+        height: 100%;
+        top:0;
+        right: 56px;
+        background-color: var(--background-base);
+        mask-image: linear-gradient(90deg, transparent, white);
+        pointer-events: none;
+        transition: background-color var(--ease-out-quint) .3s;
+    }
+
+    &:has(.main-header__search:focus) {
+        &:after {
+            background-color: var(--background-card);
+            transition: none;
+        }
+    }
+
+    .icon--search {
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 16px;
+    }
+}
+
+.main-header__search {
+    width: 100%;
+    padding: 12px 56px 12px 0;
+    text-indent: 16px;
+    background-color: var(--background-base);
+    text-overflow: clip;
+
+    &:focus {
+        background-color: var(--background-card);
+    }
+}
+.main-header__status-filter-wrapper{
+    overflow: auto;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.main-header__status-filter-set {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+    margin: 0;
+    border: none;
+}

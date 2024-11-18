@@ -1,0 +1,26 @@
+<svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root {
+    --accent-primary: #00A31B;
+    --accent-primary: color(display-p3 0 0.64 0.1067);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-primary: #C9FF00;
+        --accent-primary: color(display-p3 0.8333 1 0);
+    }
+}
+</style>
+<g clip-path="url(#clip0_1_208)">
+<rect y="0.5" width="35" height="35" rx="12" style="fill:var(--accent-primary);fill-opacity:1;"/>
+<path d="M7.30503 5.01332C8.28709 5.09924 8.9436 5.56683 9.36194 6.21619C9.7988 6.89431 9.99684 7.81281 9.91441 8.75498C9.83198 9.69714 9.47745 10.5673 8.92947 11.1593C8.40473 11.7261 7.677 12.0726 6.69494 11.9867C5.71289 11.9008 5.05638 11.4332 4.63804 10.7838C4.20118 10.1057 4.00313 9.18719 4.08556 8.24502C4.16799 7.30285 4.52252 6.4327 5.0705 5.84074C5.59524 5.27389 6.32298 4.9274 7.30503 5.01332Z" stroke="black" style="stroke:black;stroke-opacity:1;" stroke-width="2"/>
+<path d="M22.305 5.01332C23.2871 5.09924 23.9436 5.56683 24.3619 6.21619C24.7988 6.89431 24.9968 7.81281 24.9144 8.75498C24.832 9.69714 24.4775 10.5673 23.9295 11.1593C23.4047 11.7261 22.677 12.0726 21.6949 11.9867C20.7129 11.9008 20.0564 11.4332 19.638 10.7838C19.2012 10.1057 19.0031 9.18719 19.0856 8.24502C19.168 7.30285 19.5225 6.4327 20.0705 5.84074C20.5952 5.27389 21.323 4.9274 22.305 5.01332Z" stroke="black" style="stroke:black;stroke-opacity:1;" stroke-width="2"/>
+<path d="M24 17.0163C20.5163 20.5 11.5 20.5 9 18" stroke="black" style="stroke:black;stroke-opacity:1;" stroke-width="2" stroke-linecap="round"/>
+<path d="M5.5 37H10.5787C13.6684 37 16.1927 32.7867 13.7663 30.356C13.4003 29.9894 13.5895 29.3628 14.0973 29.2601L18.2673 28.4161C20.7299 27.9178 19.9504 24.1131 17.5008 24.602L9.14332 26.2701C8.39085 26.4203 7.51391 25.5136 7.68571 24.7688C8.43181 21.5341 8.48861 20.3995 6.0582 20.0944C4.96223 19.9568 4.05882 20.8954 4.05882 22V23.6637C4.05882 26.5613 3 26.375 3 32.5" stroke="black" style="stroke:black;stroke-opacity:1;" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="clip0_1_208">
+<rect y="0.5" width="35" height="35" rx="12" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root {
+    --accent-primary: #00A31B;
+    --accent-primary: color(display-p3 0 0.64 0.1067);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-primary: #C9FF00;
+        --accent-primary: color(display-p3 0.8333 1 0);
+    }
+}
+</style>
+<g opacity="0.38" filter="url(#filter0_f_8_9)">
+<path d="M16 4L19.3941 12.6059L28 16L19.3941 19.3941L16 28L12.6059 19.3941L4 16L12.6059 12.6059L16 4Z" style="fill:var(--accent-primary);fill-opacity:1;"/>
+</g>
+<path d="M15 17V26H17V17H26V15H17V6H15V15H6V17H15Z" style="fill:var(--accent-primary);fill-opacity:1;"/>
+<defs>
+<filter id="filter0_f_8_9" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_8_9"/>
+</filter>
+</defs>
+</svg>

@@ -1,0 +1,173 @@
+.button {
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 12px;
+}
+
+.button--add-task {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 16px 48px 16px 16px;
+    background-color: var(--background-base);
+    color: var(--accent-primary);
+    text-align: left;
+    border-radius: 28px 28px 0 0;
+    z-index: 1;
+    box-shadow: 0 -32px 0 var(--background-body);
+    border-bottom: 1px solid var(--background-ghost);
+
+    &:hover,
+    &:focus {
+        background-color: var(--background-card);
+    }
+}
+
+.button--task-delete {
+    margin-right: 8px;
+    opacity: .5;
+    transition: opacity var(--ease-out-quint) .3s;
+
+    &:hover {
+        opacity: 1;
+        transition: none;
+    }
+}
+
+.button__icon--right {
+    position: absolute;
+    right: 12px;
+}
+
+.button__icon--plus {
+    margin-top: -2px;
+}
+
+.button--primary {
+    justify-content: center;
+    padding: 12px 32px;
+    background-color: var(--accent-primary);
+    color: var(--foreground-inverted);
+    transition: filter .3s var(--ease-out-quint);
+
+    &:hover,
+    &:focus {
+        transition: none;
+        filter: brightness(.8) contrast(1.2);
+    }
+}
+
+.button--wide {
+    width: 100%;
+}
+
+.input {
+    font-family: inherit;
+    padding: 6px 8px 6px 0;
+    background-color: var(--background-card);
+    color: var(--foreground-body);
+    border-radius: 12px;
+    border: none;
+    text-indent: 8px;
+    transition: background-color .3s var(--ease-out-quint);
+
+    &:focus {
+        transition: none;
+        background-color: var(--background-ghost);
+    }
+
+    &::placeholder {
+        color: var(--foreground-muted);
+        opacity: 1;
+    }
+}
+.input--textarea {
+    text-indent: initial;
+    padding: 6px 8px;
+    scrollbar-width: thin;
+}
+
+.input--error {
+    outline: 1px solid var(--accent-danger);
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: var(--background-ghost);
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:checked {
+        background-color: var(--accent-primary);
+        box-shadow: 0 0 18px -6px var(--accent-primary);
+
+        &::after {
+            content: "✓";
+            color: var(--foreground-inverted);
+        }
+    }
+
+}
+
+.toggle__lable {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.toggle {
+    position: relative;
+    appearance: none;
+    width: 56px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: var(--background-ghost);
+    &:after {
+        position: absolute;
+        display: block;
+        top:2px;
+        left:2px;
+        content: "";
+        width: 28px;
+        height: 28px;
+        background-color: var(--foreground-muted);
+        border-radius: 50%;
+        transition: translate var(--ease-out-quint) .3s;
+    }
+
+    &:checked {
+        background-color: var(--accent-primary);
+        &:after {
+            translate: 24px 0;
+            background-color: var(--foreground-inverted);
+        }
+    }
+}
+
+.chip__input {
+    appearance: none;
+    display: none;
+}
+.chip {
+    padding: 6px 8px;
+    background-color: var(--background-base);
+    border-radius: 12px;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--background-card);
+    }
+}
+.chip:has(.chip__input:checked) {
+    background-color: var(--background-ghost);
+    cursor: initial;
+}

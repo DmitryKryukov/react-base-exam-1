@@ -1,0 +1,33 @@
+:root {
+    --background-body: #f2f2f2;
+    --background-base: #fff;
+    --background-card: #ededed;
+    --background-ghost: #f2f2f2;
+    --foreground-body: #000;
+    --foreground-muted: #808080;
+    --foreground-inverted: #fff;
+    --accent-primary: #00A31B;
+    --accent-primary: color(display-p3 0 0.64 0.1067);
+    --accent-danger: #FF7033;
+    --accent-danger: color(display-p3 1 0.44 0.2);
+    --modal-overlay: #000000CC;
+    
+    --container-padding: 16px;
+
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-body: #000;
+        --background-base: #131313;
+        --background-card: #212121;
+        --background-ghost: #303030;
+        --foreground-body: #fff;
+        --foreground-inverted: #000;
+        --accent-primary: #C9FF00;
+        --accent-primary: color(display-p3 0.8333 1 0);
+        --accent-danger: #CC3D00;
+        --accent-danger: color(display-p3 0.8 0.24 0);
+    }
+}

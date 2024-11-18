@@ -1,0 +1,35 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root {
+    --accent-primary: #00A31B;
+    --accent-primary: color(display-p3 0 0.64 0.1067);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-primary: #C9FF00;
+        --accent-primary: color(display-p3 0.8333 1 0);
+    }
+}
+</style>
+<g clip-path="url(#clip0_43_2)">
+<mask id="mask0_43_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" style="fill:var(--accent-primary);fill-opacity:1;"/>
+</mask>
+<g mask="url(#mask0_43_2)">
+<path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" style="fill:var(--accent-primary);fill-opacity:1;"/>
+<path d="M-2.15332 19.1422L13.7087 16.3452L14.6666 21.7779L9.80403 22.6353L12.1663 36.0324L6.04619 37.1116L3.68392 23.7144L-1.1954 24.5748L-2.15332 19.1422Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M14.0377 16.2872L20.1578 15.2081L21.3257 21.8311L26.2218 20.9678L25.054 14.3447L31.1741 13.2656L34.4942 32.0954L28.3741 33.1746L27.1501 26.2328L22.254 27.0961L23.478 34.0379L17.3579 35.117L14.0377 16.2872Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M40.1783 23.6071L47.841 22.2561L47.0458 17.7456L39.383 19.0967L39.0371 17.1349L46.8674 15.7542L45.9686 10.6569L32.0182 13.1167L35.3383 31.9465L49.2889 29.4868L48.3901 24.3894L40.5596 25.7701L40.1783 23.6071Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M40.9706 40.9706C50.3431 31.598 50.3431 16.402 40.9706 7.02944C31.598 -2.34315 16.402 -2.34315 7.02943 7.02944C-2.34315 16.402 -2.34315 31.598 7.02943 40.9706C16.402 50.3431 31.598 50.3431 40.9706 40.9706Z" fill="url(#paint0_linear_43_2)" style=""/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_43_2" x1="7.02943" y1="7.02944" x2="40.9706" y2="40.9706" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.2" style="stop-color:white;stop-opacity:0.2;"/>
+<stop offset="1" stop-opacity="0" style="stop-color:none;stop-opacity:0;"/>
+</linearGradient>
+<clipPath id="clip0_43_2">
+<rect width="48" height="48" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>

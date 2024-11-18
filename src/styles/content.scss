@@ -1,0 +1,17 @@
+.main-content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 44px 12px 0;
+    @media (max-width: 1150px) {
+        padding-top: 0;
+    }
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: min(500px, 100%);
+    min-height: 100%;
+    background-color: var(--background-base);
+    border-radius: 28px 28px 0 0;
+}

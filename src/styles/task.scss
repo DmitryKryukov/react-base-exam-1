@@ -1,0 +1,128 @@
+.task-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.task {
+    --task-foreground-color: var(--foreground-body);
+    position: relative;
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 16px;
+    color: var(--task-foreground-color);
+    transition: background-color var(--ease-out-quint) .3s;
+    cursor: pointer;
+
+    &:not(:first-child) {
+        border-bottom: 1px solid var(--background-ghost);
+    }
+
+    &:not(.task--zero):hover {
+        background-color: var(--background-card);
+        transition: none;
+
+        .task-actions {
+            pointer-events: initial;
+            opacity: 1;
+        }
+    }
+}
+.task--overdue::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: var(--accent-danger);
+    opacity: .1;
+
+    pointer-events: none;
+
+}
+
+.task:has(.checkbox:checked) {
+    --task-foreground-color: var(--foreground-muted);
+
+    & .task__title {
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+        text-decoration-color: var(--accent-danger);
+    }
+    & .task-due-date {
+        opacity: .5;
+    }
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.task__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.task__description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.task__description,
+.task__created-at,
+.task-due-date {
+    font-size: 16px;
+}
+.task-date-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.task__created-at {
+    color: var(--foreground-muted);
+}
+.task-due-date {
+    display: flex;
+    
+    gap: 2px;
+    color: var(--accent-danger);
+
+}
+
+@media (pointer: fine) {
+    .task-actions {
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+.task--zero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px 16px;
+    flex: 1;
+    gap: 16px;
+    color: var(--foreground-muted);
+    cursor: initial;
+}
+
+.task--zero .task__title {
+    margin-top: -4px;
+}
