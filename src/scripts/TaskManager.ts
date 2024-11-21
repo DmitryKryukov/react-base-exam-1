@@ -4,7 +4,6 @@ class TaskManager {
     private tasks: ITask[] = [];
 
     addTask(task: ITask): void {
-        console.log(task);
         this.tasks.push(task);
         this.saveToLocalStorage();
     }
