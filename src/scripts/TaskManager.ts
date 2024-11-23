@@ -4,7 +4,6 @@ class TaskManager {
     private tasks: ITask[] = [];
 
     addTask(task: ITask): void {
-        console.log(task);
         this.tasks.push(task);
         this.saveToLocalStorage();
     }
@@ -77,7 +76,6 @@ class TaskManager {
             (task.description === undefined || typeof task.description === 'string') &&
             Object.values(TaskStatus).includes(task.status) &&
             !isNaN(new Date(task.createdAt).getTime()) &&
-            typeof task.createdAt === 'string' &&
             (typeof task.dueDate === 'undefined' || typeof task.dueDate === 'boolean' || !isNaN(new Date(task.dueDate).getTime()))
             );
     }
