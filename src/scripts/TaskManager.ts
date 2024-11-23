@@ -23,11 +23,11 @@ class TaskManager {
         return this.tasks.filter(task => {
             const searchValueMatches = searchValue
                 ? (task.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-                   task.description.toLowerCase().includes(searchValue.toLowerCase()))
+                    task.description.toLowerCase().includes(searchValue.toLowerCase()))
                 : true;
-    
+
             const statusMatches = status ? status == task.status : true;
-    
+
             return searchValueMatches && statusMatches;
         });
     }
@@ -35,12 +35,12 @@ class TaskManager {
     getTasks(): ITask[] {
         return this.tasks;
     }
-    
+
     saveToLocalStorage(): void {
         console.log(this.tasks);
         localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
-    
+
     loadFromLocalStorage(): boolean {
         const data = localStorage.getItem('tasks');
         if (!data) return false;
@@ -76,9 +76,10 @@ class TaskManager {
             typeof task.title === 'string' &&
             (task.description === undefined || typeof task.description === 'string') &&
             Object.values(TaskStatus).includes(task.status) &&
+            !isNaN(new Date(task.createdAt).getTime()) &&
             typeof task.createdAt === 'string' &&
-            (typeof task.dueDate === 'undefined' || typeof task.dueDate === 'boolean' || typeof task.dueDate === 'string')
-        );
+            (typeof task.dueDate === 'undefined' || typeof task.dueDate === 'boolean' || !isNaN(new Date(task.dueDate).getTime()))
+            );
     }
 
     private createTaskFromParsedData(task: any): Task {
